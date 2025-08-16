@@ -35,12 +35,12 @@ jobs:
 
     steps:
       - name: Java Library > Checkout Repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
         with:
           path: ${{ env.LIBRARY_CHECKOUT_PATH }}
 
       - name: Proto Schemas > Checkout Repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
         with:
           repository: googleapis/google-cloudevents
           path: ${{ env.DATA_SOURCE_CHECKOUT_PATH }}
@@ -78,7 +78,7 @@ jobs:
 
       - name: Create a pull request with updates
         # https://github.com/googleapis/code-suggester#Action
-        uses: googleapis/code-suggester@f9fef85aa02459e30e62526abe950341cbbd768b # v4
+        uses: googleapis/code-suggester@589b3ac11ac2575fd561afa45034907f301a375b # v4
         env:
           # Provided by the GitHub Automation team
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
